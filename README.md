@@ -60,11 +60,11 @@ namespace Assignement_03
                 if (!candidateDict.ContainsKey(applicant.applicantCity))
                 {
                     candidateDict.Add(applicant.applicantCity, applicant.applicantName);
-                    Console.WriteLine(candidateDict[applicant.applicantCity]);
                 }
                 if (applicant.applicantCGPA >= 3.0)
                 {
                     selectedApplicants.Add(applicant);
+                    Console.WriteLine(applicant.applicantName);
                 }
             }
             Console.WriteLine("\nSelected Candidates With Marks 90% Or Above Are : \n");
