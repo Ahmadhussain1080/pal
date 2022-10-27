@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task22</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#button').click(function(){
+                $('#myDiv').children().css({"background-color": "blue", "color": "white"});
+                $('#myDiv').append('<span class="yellow">'+ $("#text").val() + '</span><br>');
+            });
+            $('#button').keypress(function(){
+                $('#myDiv').children().css({"background-color": "blue", "color": "white"});
+                $('#myDiv').append('<span class="yellow">'+ $("#text").val() + '</span><br>');
+                if(keypress=='Enter')
+                {
+                $('#myDiv').children().css({"background-color": "blue", "color": "white"});
+                $('#myDiv').append('<span class="yellow">'+ $("#text").val() + '</span><br>');
+                }
+            });
+        });
+    </script>
+    <style>
+        button
+        {
+            margin: 10px 10px;
+            padding: 15px 30px;
+            border-radius: 3px;
+            border: none;
+            background-color: rgb(194, 76, 76);
+            color: white;
+        }
+        input
+        {
+            width: 400px;
+            height: 40px;
+            margin-left: 20px;
+            font-size: 20px;
+            padding: 0px 10px;
+        }
+        .yellow
+        {
+            width: 100px;
+            height: 30px;
+            display: inline-block;
+            margin: 10px 10px;
+            padding: 15px 30px;
+            border-radius: 3px;
+            border: none;
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <input type="text" id="text">
+        <button type="button" id="button">Add Box</button>
+        <hr>
+        <div id="myDiv">
+        </div>
+    </main>
+</body>
+</html>
